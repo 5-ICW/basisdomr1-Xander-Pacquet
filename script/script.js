@@ -20,3 +20,11 @@ const groenten = [
     prijs: 0.7,
   },
 ];
+
+const lijstDiv = document.getElementById("lijst");
+
+groenten.forEach((groente) => {
+  const p = document.createElement("p");
+  p.textContent = `${groente.naam} - €${groente.prijs.toFixed(2)}`;
+  lijstDiv.appendChild(p);
+});
